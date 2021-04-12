@@ -40,13 +40,14 @@ public class XMLFormatter extends AbstractCacheableFormatter implements Formatte
         String tabWidth = options.get("tabWidth");
         String splitMultiAttrs = options.get("splitMultiAttrs");
         String wellFormedValidation = options.get("wellFormedValidation");
+        String deleteBlankLines = options.get("deleteBlankLines");
 
         prefs.setMaxLineLength(maxLineLength != null ? Integer.valueOf(maxLineLength) : null);
         prefs.setWrapLongLines(wrapLongLines != null ? Boolean.valueOf(wrapLongLines) : null);
         prefs.setTabInsteadOfSpaces(tabInsteadOfSpaces != null ? Boolean.valueOf(tabInsteadOfSpaces) : null);
         prefs.setTabWidth(tabWidth != null ? Integer.valueOf(tabWidth) : null);
         prefs.setSplitMultiAttrs(splitMultiAttrs != null ? Boolean.valueOf(splitMultiAttrs) : null);
-
+        prefs.setDeleteBlankLines(deleteBlankLines != null ? Boolean.valueOf(deleteBlankLines) : null);
         if (wellFormedValidation != null) {
             prefs.setWellFormedValidation(wellFormedValidation);
         }
